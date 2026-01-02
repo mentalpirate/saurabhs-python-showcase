@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import TypingEffect from "./TypingEffect";
 
 const HeroSection = () => {
   return (
@@ -74,11 +75,21 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
-            className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12"
+            className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-6"
           >
             Crafting elegant solutions with Python. From data pipelines to 
             web applications, turning complex problems into clean code.
           </motion.p>
+
+          {/* Typing Effect */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="mb-12"
+          >
+            <TypingEffect />
+          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
